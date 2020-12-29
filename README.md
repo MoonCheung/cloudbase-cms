@@ -1,32 +1,4 @@
-# CloudBase CMS
-
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-<p align="center">
-  <img src="./docs/assets/banner.jpg" alt="Logo">
-  <h3 align="center">
-    打造一站式云端内容管理系统
-  </h3>
-  <p align="center">
-    <br />
-    <a href="https://cms-demo-1252710547.tcloudbaseapp.com">
-      <strong>✨ 在线示例（账号密码见微信群公告）»</strong>
-    </a>
-    <br />
-    <br />
-    <a href="https://docs.cloudbase.net/cms/intro.html" target="_blank">文档</a>
-    ·
-    <a href="https://github.com/TencentCloudBase/cloudbase-extension-cms/issues">报告 Bug</a>
-    ·
-    <a href="https://github.com/TencentCloudBase/cloudbase-extension-cms/issues">特性建议</a>
-  </p>
-</p>
-
-CloudBase CMS 是云开发推出的，基于 Node.js 的 Headless 内容管理平台，提供了丰富的内容管理功能，安装简单，易于二次开发，并与云开发的生态体系紧密结合，助力开发者提升开发效率。
+# 二次开发 CloudBase CMS
 
 ## 功能特性
 
