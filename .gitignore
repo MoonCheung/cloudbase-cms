@@ -36,3 +36,4 @@ lerna-debug.log*
 config/config.json
 .env.local
 .eslintcache
+package-lock.json
