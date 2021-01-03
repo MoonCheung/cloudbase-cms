@@ -33,7 +33,10 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# 忽略锁文件
+package-lock.json
+yarn.lock
+
 config/config.json
 .env.local
 .eslintcache
-package-lock.json

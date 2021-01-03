@@ -39,3 +39,7 @@ screenshot
 build
 
 public/config.js
+
+# 忽略锁文件
+package-lock.json
+yarn.lock
