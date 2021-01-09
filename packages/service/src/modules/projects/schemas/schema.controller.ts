@@ -43,7 +43,11 @@ export class SchemasController {
   ) {
     const { page = 1, pageSize = 100 } = query
 
-    const schemas = checkAccessAndGetResource(projectId, req)
+    const schemas = checkAccessAndGetResource({
+      req,
+      projectId,
+      action: 'get',
+    })
 
     const $ = this.cloudbaseService.db.command
     let filter: any = {}
@@ -80,7 +84,12 @@ export class SchemasController {
   async getSchema(@Param() params, @Request() req: IRequest) {
     const { projectId, schemaId } = params
 
-    checkAccessAndGetResource(projectId, req, schemaId)
+    checkAccessAndGetResource({
+      req,
+      projectId,
+      action: 'get',
+      resourceId: schemaId,
+    })
 
     const {
       data: [schema],
@@ -126,7 +135,12 @@ export class SchemasController {
   ) {
     const { projectId, schemaId } = params
 
-    checkAccessAndGetResource(projectId, req, schemaId)
+    checkAccessAndGetResource({
+      req,
+      projectId,
+      action: 'update',
+      resourceId: schemaId,
+    })
 
     const {
       data: [schema],
@@ -150,11 +164,6 @@ export class SchemasController {
       })
       .update(data)
 
-    if (payload?.collectionName) {
-      // 重新创建集合
-      await this.schemaService.createCollection(payload.collectionName)
-    }
-
     // 重命名集合
     if (payload?.collectionName !== schema.collectionName) {
       await this.schemaService.renameCollection(schema.collectionName, payload.collectionName)
@@ -175,7 +184,12 @@ export class SchemasController {
     const { projectId, schemaId } = params
     const { deleteCollection } = body
 
-    checkAccessAndGetResource(projectId, req, schemaId)
+    checkAccessAndGetResource({
+      req,
+      projectId,
+      action: 'delete',
+      resourceId: schemaId,
+    })
 
     // 只有管理员可以删除集合
     if (deleteCollection && !req.cmsUser.isAdmin) {

@@ -17,8 +17,8 @@ const schemaCache = new MemoryCache()
 
 // 从环境变量中获取 envId
 export const getEnvIdString = (): string => {
-  const { TCB_ENV, SCF_NAMESPACE, TCB_ENVID } = process.env
-  return TCB_ENV || SCF_NAMESPACE || TCB_ENVID
+  const { TCB_ENV, SCF_NAMESPACE, TCB_ENVID, ENV_ID } = process.env
+  return TCB_ENV || SCF_NAMESPACE || TCB_ENVID || ENV_ID
 }
 
 /**
@@ -174,8 +174,8 @@ export const isRunInServerMode = () =>
   !!process.env.KUBERNETES_SERVICE_HOST
 
 // 是否在云函数中运行
-export const isInSCF = () =>
-  process.env.NODE_ENV !== 'development' && process.env.TENCENTCLOUD_RUNENV === 'scf'
+export const isInSCF = () => process.env.TENCENTCLOUD_RUNENV === 'scf'
+
 // 是否在云托管中运行
 export const isRunInContainer = () => !!process.env.KUBERNETES_SERVICE_HOST
 

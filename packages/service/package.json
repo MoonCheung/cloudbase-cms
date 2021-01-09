@@ -1,6 +1,6 @@
 {
   "name": "cloudbase-cms-service",
-  "version": "2.6.1",
+  "version": "2.6.5",
   "description": "CloudBase content manager system service",
   "author": "cwuyiqing@gmail.com",
   "private": true,
@@ -19,7 +19,7 @@
     "@nestjs/core": "^7.3.2",
     "@nestjs/platform-express": "^7.3.2",
     "@types/lodash": "^4.14.158",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "class-transformer": "^0.3.1",
     "class-validator": "^0.12.2",
@@ -29,11 +29,11 @@
     "lodash": "^4.17.19",
     "nanoid": "^3.1.10",
     "pino": "^6.8.0",
-    "pino-pretty": "^4.3.0",
     "ramda": "^0.27.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.6.0",
-    "serverless-http": "^2.5.0"
+    "serverless-http": "^2.5.0",
+    "signale": "^1.4.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.4.1",
