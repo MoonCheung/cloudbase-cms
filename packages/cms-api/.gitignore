@@ -36,3 +36,5 @@ lerna-debug.log*
 # 忽略锁文件
 package-lock.json
 yarn.lock
+
+.env.local
